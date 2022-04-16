@@ -5,10 +5,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-public class MarkdownParse {
+public class MarkdownParse{
 
-    public static ArrayList<String> getLinks(String markdown) {
-        ArrayList<String> toReturn = new ArrayList<>();
+    public static String getLinks(String markdown) {
+        String toReturn = "";
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
@@ -16,18 +16,32 @@ public class MarkdownParse {
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            if(openBracket == -1 || closeBracket == -1 || openParen == -1 || closeParen == -1){
+                break;
+            }
+            toReturn = markdown.substring(openParen + 1, closeParen);
             currentIndex = closeParen + 1;
         }
 
-        return toReturn;
+        if(toReturn.length() > 0){
+            return toReturn;
+        }else{
+            return null;
+        }
+        
     }
 
 
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
         String content = Files.readString(fileName);
-        ArrayList<String> links = getLinks(content);
+        String[] split = content.split("\n");
+        ArrayList<String> links = new ArrayList<String>();
+        for(String s: split){
+            if(getLinks(s) != null){
+                links.add(getLinks(s));
+            }
+        }
 	    System.out.println(links);
     }
 }
