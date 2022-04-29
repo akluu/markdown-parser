@@ -15,7 +15,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest1() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/newTest.md"); 
+        Path fileName = Path.of("newTest.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
@@ -34,7 +34,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest2() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/testFiles/test-file2.md"); 
+        Path fileName = Path.of("testFiles/test-file2.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
@@ -53,7 +53,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest3() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/testFiles/test-file3.md"); 
+        Path fileName = Path.of("testFiles/test-file3.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
@@ -71,7 +71,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest4() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/testFiles/test-file4.md"); 
+        Path fileName = Path.of("testFiles/test-file4.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
@@ -88,7 +88,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest5() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/testFiles/test-file5.md"); 
+        Path fileName = Path.of("testFiles/test-file5.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
@@ -106,7 +106,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest6() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/testFiles/test-file6.md"); 
+        Path fileName = Path.of("testFiles/test-file6.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
@@ -123,7 +123,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest7() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/testFiles/test-file7.md"); 
+        Path fileName = Path.of("testFiles/test-file7.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
@@ -141,7 +141,7 @@ public class MarkdownParseTest {
 
     @Test
     public void MarkdownParseTest8() throws IOException {
-        Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/testFiles/test-file8.md"); 
+        Path fileName = Path.of("testFiles/test-file8.md"); 
         String content = Files.readString(fileName);
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
