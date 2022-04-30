@@ -42,7 +42,6 @@ public class MarkdownParse{
         }else{
             return null;
         }
-
     }
 
 
