@@ -7,6 +7,10 @@ import java.util.ArrayList;
 
 public class MarkdownParse{
 
+    public static boolean isValidLink(String link){
+        return link.indexOf(".") != -1;
+    }
+
     public static String getLinks(String markdown) {
         String toReturn = "";
         // find the next [, then find the ], then find the (, then read link upto next )
@@ -38,7 +42,7 @@ public class MarkdownParse{
         }else{
             return null;
         }
-        
+
     }
 
 
@@ -48,7 +52,8 @@ public class MarkdownParse{
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
         for(String s: split){
-            if(getLinks(s) != null){
+            String link = getLinks(s);
+            if(link != null && isValidLink(link)){
                 links.add(getLinks(s));
             }
         }
