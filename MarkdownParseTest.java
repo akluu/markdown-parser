@@ -163,7 +163,8 @@ public class MarkdownParseTest {
         String[] split = content.split("\n");
         ArrayList<String> links = new ArrayList<String>();
         for(String s: split){
-            if(MarkdownParse.getLinks(s) != null){
+            String link = MarkdownParse.getLinks(s);
+            if(link != null && MarkdownParse.isValidLink(link)){
                 links.add(MarkdownParse.getLinks(s));
             }
         }
