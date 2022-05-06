@@ -10,7 +10,6 @@ public class MarkdownParse{
     public static boolean isValidLink(String link){
         return link.indexOf(".") != -1;
     }
-
     public static String getLinks(String markdown) {
         String toReturn = "";
         // find the next [, then find the ], then find the (, then read link upto next )

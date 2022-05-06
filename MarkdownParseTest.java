@@ -170,7 +170,6 @@ public class MarkdownParseTest {
         }
 
         ArrayList<String> res = new ArrayList<String>();
-
         assertEquals(res, links);
     }
 
