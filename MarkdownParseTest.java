@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 
 import org.junit.*;
+
 public class MarkdownParseTest {
     @Test
     public void addition() {
@@ -173,11 +174,101 @@ public class MarkdownParseTest {
         assertEquals(res, links);
     }
 
+    // @Test
+    // public void snippet1Test() throws IOException{
+    //     Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/Lab4MarkdownSnippets/snippet1.md"); 
+    //     String content = Files.readString(fileName);
+    //     String[] split = content.split("\n");
+    //     ArrayList<String> links = new ArrayList<String>();
+    //     for(String s: split){
+    //         String link = MarkdownParse.getLinks(s);
+    //         if(link != null && MarkdownParse.isValidLink(link)){
+    //             links.add(MarkdownParse.getLinks(s));
+    //         }
+    //     }
 
+    //     ArrayList<String> res = new ArrayList<String>();
+    //     res.add("'google.com");
+    //     res.add("google.com");
+    //     res.add("ucsd.edu");
+    //     assertEquals(res, links);
+    // }
 
+    // @Test
+    // public void snippet1ReviewTest() throws IOException{
+    //     Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/Lab4MarkdownSnippets/snippet1.md");
+    //     String content = Files.readString(fileName);
+    //     ArrayList<String> links = MarkdownParseReview.getLinks(content);
 
+    //     ArrayList<String> res = new ArrayList<String>();
+    //     res.add("'google.com");
+    //     res.add("google.com");
+    //     res.add("ucsd.edu");
+    //     assertEquals(res, links);
+    // }
 
+    // @Test
+    // public void snippet2Test() throws IOException{
+    //     Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/Lab4MarkdownSnippets/snippet2.md"); 
+    //     String content = Files.readString(fileName);
+    //     String[] split = content.split("\n");
+    //     ArrayList<String> links = new ArrayList<String>();
+    //     for(String s: split){
+    //         String link = MarkdownParse.getLinks(s);
+    //         if(link != null && MarkdownParse.isValidLink(link)){
+    //             links.add(MarkdownParse.getLinks(s));
+    //         }
+    //     }
 
+    //     ArrayList<String> res = new ArrayList<String>();
+    //     res.add("a.com");
+    //     res.add("a.com((");
+    //     res.add("example.com");
+    //     assertEquals(res, links);
+    // }
 
+    // @Test
+    // public void snippet2ReviewTest() throws IOException{
+    //     Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/Lab4MarkdownSnippets/snippet2.md");
+    //     String content = Files.readString(fileName);
+    //     ArrayList<String> links = MarkdownParseReview.getLinks(content);
 
+    //     ArrayList<String> res = new ArrayList<String>();
+    //     res.add("a.com");
+    //     res.add("a.com((");
+    //     res.add("example.com");
+    //     assertEquals(res, links);
+    // }
+
+    // @Test
+    // public void snippet3Test() throws Exception{
+    //     Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/Lab4MarkdownSnippets/snippet3.md"); 
+    //     String content = Files.readString(fileName);
+    //     String[] split = content.split("\n");
+    //     ArrayList<String> links = new ArrayList<String>();
+    //     for(String s: split){
+    //         String link = MarkdownParse.getLinks(s);
+    //         if(link != null && MarkdownParse.isValidLink(link)){
+    //             links.add(MarkdownParse.getLinks(s));
+    //         }
+    //     }
+
+    //     ArrayList<String> res = new ArrayList<String>();
+    //     res.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+    //     assertEquals(res, links);
+
+    // }
+
+    // @Test
+    // public void snippet3ReviewTest()throws Exception{
+    //     Path fileName = Path.of("/Users/andy/Desktop/cse15l/markdown-parser/Lab4MarkdownSnippets/snippet3.md");
+    //     String content = Files.readString(fileName);
+    //     ArrayList<String> links = MarkdownParseReview.getLinks(content);
+
+    //     ArrayList<String> res = new ArrayList<String>();
+    //     res.add("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule");
+    //     assertEquals(res, links);
+    // }
+
+   
 }
